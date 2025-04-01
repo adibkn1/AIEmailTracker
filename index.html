@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+    <title>AI Insights Weekly - Newsletter Subscription</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <!-- Include icons library -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+  </head>
+  <body>
+    <div class="font-sans text-gray-100 bg-gray-950">
+      <div class="bg-gradient min-h-screen">
+        <!-- Header Section -->
+        <header class="container">
+          <div class="flex items-center">
+            <div class="w-10 h-10 rounded-lg bg-gradient-to-r from-purple-600 to-blue-600 flex items-center justify-center mr-3 shadow-lg shadow-purple-500/20">
+              <i data-lucide="zap" class="h-6 w-6 text-white"></i>
+            </div>
+            <h1 class="text-xl font-bold font-space-grotesk">
+              <span class="gradient-text">AI Insights</span> 
+              <span class="bg-gradient-to-r from-purple-500 to-blue-500 bg-clip-text text-transparent">Weekly</span>
+            </h1>
+          </div>
+        </header>
+
+        <!-- Main Content -->
+        <div class="container max-w-6xl px-4 py-12 mx-auto">
+          <div class="content-wrapper">
+            <!-- Left Column - Content -->
+            <div class="w-full md:w-1/2 space-y-6">
+              <h1 id="mainTitle" class="text-4xl md:text-5xl font-bold text-white leading-tight">
+                <span class="gradient-text">AI Content</span>
+                <br>
+                Delivered
+              </h1>
+              <p id="mainSubtitle" class="text-lg text-gray-300 mb-8">
+                Exclusive AI insights and content delivered straight to your inbox.
+              </p>
+              
+              <div class="w-full max-w-[740px]">
+                <div class="features-container">
+                  <div class="feature-card">
+                    <div class="icon-container">
+                      <svg class="icon-purple" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+                      </svg>
+                    </div>
+                    <div class="text-container">
+                      <h3 id="researchTitle" class="font-semibold text-white">Latest AI Research</h3>
+                      <p id="researchDescription" class="text-gray-400">Weekly summaries of groundbreaking research</p>
+                    </div>
+                  </div>
+                  <div class="feature-card">
+                    <div class="icon-container blue">
+                      <svg class="icon-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                      </svg>
+                    </div>
+                    <div class="text-container">
+                      <h3 id="applicationsTitle" class="font-semibold text-white">Practical Applications</h3>
+                      <p id="applicationsDescription" class="text-gray-400">Real-world use cases and implementations</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Right Column - Form -->
+            <div class="w-full md:w-1/2">
+              <div class="bg-gray-900 p-6 rounded-2xl shadow-lg border border-gray-800" style="backdrop-filter: blur(20px);">
+                <h2 id="formTitle" class="text-xl font-semibold mb-4 text-white">Get AI Content Updates</h2>
+                
+                <form 
+                  id="subscription-form" 
+                  class="space-y-4"
+                >
+                  <div>
+                    <label id="emailLabel" for="email" class="block text-sm font-medium text-gray-300 mb-1">
+                      Your Email
+                    </label>
+                    <input 
+                      id="email"
+                      name="email"
+                      type="email"
+                      placeholder="you@example.com" 
+                      class="w-full px-4 py-3 rounded-xl border bg-gray-800 text-white focus:ring-2 focus:ring-primary focus:border-primary transition"
+                      required
+                    />
+                  </div>
+                  
+                  <div>
+                    <div class="flex items-start space-x-2">
+                      <input 
+                        type="checkbox" 
+                        id="consent"
+                        class="mt-1 h-4 w-4 text-primary focus:ring-primary rounded"
+                        checked
+                        required
+                      />
+                      <label 
+                        for="consent"
+                        id="checkboxLabel"
+                        class="text-sm text-gray-300"
+                      >
+                        I agree to receive AI content and updates via email
+                      </label>
+                    </div>
+                  </div>
+                  
+                  <button 
+                    type="submit" 
+                    id="submitButton"
+                    class="w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-medium py-3 px-6 rounded-lg transition flex items-center justify-center"
+                  >
+                    <span>Get Access</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
+                      <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                    </svg>
+                  </button>
+                  
+                  <!-- Thank you message -->
+                  <div id="thank-you-message" class="mt-4 p-3 bg-gray-800 text-green-400 rounded-lg text-center border border-green-700 hidden">
+                    Thanks! You'll receive your AI content updates soon.
+                  </div>
+                </form>
+                
+                <p id="communityText" class="text-sm text-gray-400 mt-4">Join our community of AI enthusiasts and innovators</p>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Testimonial Quote -->
+          <div class="mt-16 text-center max-w-3xl mx-auto py-8 px-4 border-t border-b border-gray-800">
+            <p class="text-xl italic text-gray-300">
+              "This newsletter has been instrumental in keeping our team updated with the latest AI developments. Highly recommended for anyone in the tech industry."
+            </p>
+            <p class="mt-4 font-semibold text-gray-200">— Sarah Johnson, AI Research Lead</p>
+          </div>
+          
+          <p class="text-center text-gray-400 mt-10 text-sm">
+            Join 10,000+ AI enthusiasts, researchers, and professionals receiving our newsletter.
+          </p>
+        </div>
+        
+        <!-- Success Modal -->
+        <div id="success-modal" class="fixed inset-0 bg-black/50 flex items-center justify-center hidden">
+          <div class="sm:max-w-md bg-gray-900 border-gray-800 rounded-xl p-6 border">
+            <div class="text-center">
+              <div class="w-16 h-16 bg-gradient-to-r from-purple-600/30 to-blue-600/30 rounded-full flex items-center justify-center mx-auto mb-4">
+                <i data-lucide="check" class="h-8 w-8 text-green-400"></i>
+              </div>
+              <h2 class="text-xl font-bold mb-2 text-white">Thank You for Subscribing!</h2>
+              <p class="text-gray-300 mb-4">
+                Your subscription to AI Insights Weekly has been confirmed. Watch your inbox for our next issue!
+              </p>
+            </div>
+            <button 
+              id="close-modal"
+              class="w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-medium py-2 px-4 rounded-lg transition"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scripts - Order matters! -->
+    <script src="content.js"></script>
+    <script>
+      // Wait for content.js to load completely
+      window.addEventListener('load', function() {
+        if (window.siteContent) {
+          populateContent();
+        } else {
+          console.error('Content not loaded properly');
+        }
+      });
+
+      function populateContent() {
+        try {
+          // Header
+          document.querySelector('.font-space-grotesk').innerHTML = 
+            `${siteContent.header.title} <span class="bg-gradient-to-r from-purple-500 to-blue-500 bg-clip-text text-transparent">${siteContent.header.titleHighlight}</span>`;
+          
+          // Hero section
+          document.getElementById('mainTitle').innerHTML = 
+            `<span class="gradient-text">${siteContent.hero.title}</span><br>${siteContent.hero.titleSecondLine}`;
+          document.getElementById('mainSubtitle').textContent = siteContent.hero.subtitle;
+          
+          // Features section
+          document.getElementById('researchTitle').textContent = siteContent.features.research.title;
+          document.getElementById('researchDescription').textContent = siteContent.features.research.description;
+          document.getElementById('applicationsTitle').textContent = siteContent.features.applications.title;
+          document.getElementById('applicationsDescription').textContent = siteContent.features.applications.description;
+          
+          // Form section
+          document.getElementById('formTitle').textContent = siteContent.form.title;
+          document.getElementById('emailLabel').textContent = siteContent.form.emailLabel;
+          document.getElementById('email').placeholder = siteContent.form.emailPlaceholder;
+          document.getElementById('checkboxLabel').textContent = siteContent.form.checkboxLabel;
+          document.getElementById('submitButton').innerHTML = 
+            `<span>${siteContent.form.submitButton}</span><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" /></svg>`;
+          document.getElementById('communityText').textContent = siteContent.form.communityText;
+          document.getElementById('thank-you-message').textContent = siteContent.form.thankYouMessage;
+          
+          // Modal
+          document.querySelector('#success-modal h2').textContent = siteContent.modal.title;
+          document.querySelector('#success-modal p').textContent = siteContent.modal.message;
+          document.getElementById('close-modal').textContent = siteContent.modal.closeButton;
+          
+          // Testimonial
+          const testimonialQuote = document.querySelector('.text-xl.italic');
+          testimonialQuote.textContent = siteContent.testimonial.quote;
+          document.querySelector('.font-semibold.text-gray-200').textContent = 
+            `— ${siteContent.testimonial.author}, ${siteContent.testimonial.role}`;
+          
+          // Footer
+          document.querySelector('.text-center.text-gray-400.mt-10').textContent = 
+            siteContent.footer.subscriberCount;
+
+          console.log('Content populated successfully');
+        } catch (error) {
+          console.error('Error populating content:', error);
+        }
+      }
+    </script>
+    <script src="scripts.js"></script>
+  </body>
+</html> 
