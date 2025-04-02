@@ -1,6 +1,11 @@
 // Initialize Lucide icons
 document.addEventListener('DOMContentLoaded', () => {
-  lucide.createIcons();
+  // Ensure Lucide is loaded
+  if (typeof lucide !== 'undefined') {
+    lucide.createIcons();
+  } else {
+    console.error('Lucide icons library not loaded');
+  }
   
   // Form submission handling
   const form = document.getElementById('subscription-form');
