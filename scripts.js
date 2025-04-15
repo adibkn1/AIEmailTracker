@@ -1,13 +1,5 @@
-// Initialize Lucide icons
+// Form submission handling
 document.addEventListener('DOMContentLoaded', () => {
-  // Ensure Lucide is loaded
-  if (typeof lucide !== 'undefined') {
-    lucide.createIcons();
-  } else {
-    console.error('Lucide icons library not loaded');
-  }
-  
-  // Form submission handling
   const form = document.getElementById('subscription-form');
   const emailInput = document.getElementById('email');
   const thankYouMessage = document.getElementById('thank-you-message');
